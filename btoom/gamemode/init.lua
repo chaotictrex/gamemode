@@ -10,14 +10,16 @@ end
 
 function GM:PlayerInitialSpawn(ply)
 	print("Survivor:" .. ply:Nick() .. ", has spawned.")
-	ply:SetModel("models/player/group01/male_07.mdl")
+	
 	ply:SetGamemodeTeam( 1 )
 end
 
 function GM:PlayerSpawn( ply )
+	ply:SetModel("models/player/group01/male_07.mdl")
 	ply:GiveGamemodeWeapons()
 end
 
 function GM:PlayerAuthed(ply,steamID,uniqueID)
 	print("Survivor:" .. ply:Nick() .. ", has gotten authed.")
 end
+
